@@ -1,34 +1,29 @@
 package pucrs.java.br.animais.domain;
 
 public abstract class Animal {
-	private int patas;
-	private boolean asas;
-	private String barulho;
-	
-	abstract void printBarulho();
+	private String nome;
+	private int idade;
+	private Genero sexo;
 
-	public int getPatas() {
-		return patas;
+	public enum Genero {MASCULINO, FEMININO};
+
+	public Animal(String nome, int idade, Genero sexo) {
+		this.nome = nome;
+		this.idade = idade;
+		this.sexo = sexo;
 	}
 
-	public void setPatas(int patas) {
-		this.patas = patas;
+	public String getNome() {
+		return nome;
 	}
 
-	public boolean isAsas() {
-		return asas;
+	public int getIdade() {
+		return idade;
 	}
 
-	public void setAsas(boolean asas) {
-		this.asas = asas;
+	public Genero getSexo() {
+		return sexo;
 	}
 
-	public String getBarulho() {
-		return barulho;
-	}
-
-	public void setBarulho(String barulho) {
-		this.barulho = barulho;
-	}
-
+	public abstract String falar();
 }
