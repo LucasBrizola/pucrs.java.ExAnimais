@@ -5,7 +5,6 @@ public class Gato {
 	private String nome;
 	private int idade;
 	private String sexo;
-	private String barulho;
 
 	public String getNome() {
 		return nome;
@@ -31,19 +30,14 @@ public class Gato {
 		this.sexo = getSexo();
 	}
 
-	public String getBarulho() {
-		return barulho;
+	public String miau() {
+		return nome + " " + "Miau!";
 	}
 
-	public void setBarulho(String barulho) {
-		this.barulho = barulho;
-	}
-
-	public Gato(String nome, int idade, String sexo, String barulho) {
+	public Gato(String nome, int idade, String sexo) {
 		this.nome = nome;
 		this.idade = idade;
 		this.sexo = sexo;
-		this.barulho = barulho;
 	}
 
 }
