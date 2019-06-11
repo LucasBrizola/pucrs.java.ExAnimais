@@ -1,38 +1,20 @@
 package pucrs.java.br.animais;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import static org.junit.Assert.assertEquals;
 
-/**
- * Unit test for simple App.
- */
-public class GatosAppTest 
-    extends TestCase
-{
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
-    }
+import org.junit.Test;
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
+import pucrs.java.br.animais.domain.Gato;
 
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
-    }
+public class GatosAppTest {
+
+	@Test
+	public void testarCriacaoDeGato() {
+		Gato gato = new Gato("Bandida",2, "feminino", "miau");
+		
+		assertEquals("Bandida", gato.getNome());
+		assertEquals(2, gato.getIdade());
+		assertEquals("feminino", gato.getSexo());
+		assertEquals("miau", gato.getBarulho());
+	}
 }

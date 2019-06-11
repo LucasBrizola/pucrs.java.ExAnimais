@@ -1,24 +1,10 @@
 package pucrs.java.br.animais.domain;
 
-import java.util.Enumeration;
-
 public class Gato {
 
 	private String nome;
 	private int idade;
-	private Enumeration<Sexo>;
-	private int patas;
-	private boolean asas;
-	
-	public int getIdade() {
-		return idade;
-	}
-
-	public void setIdade(int idade) {
-		this.idade = idade;
-	}
-
-
+	private String sexo;
 	private String barulho;
 
 	public String getNome() {
@@ -29,20 +15,20 @@ public class Gato {
 		this.nome = nome;
 	}
 
-	public int getPatas() {
-		return patas;
+	public int getIdade() {
+		return idade;
 	}
 
-	public void setPatas(int patas) {
-		this.patas = patas;
+	public void setIdade(int idade) {
+		this.idade = idade;
 	}
 
-	public boolean isAsas() {
-		return asas;
+	public String getSexo() {
+		return sexo;
 	}
 
-	public void setAsas(boolean asas) {
-		this.asas = asas;
+	public void setSexo(String sexo) {
+		this.sexo = getSexo();
 	}
 
 	public String getBarulho() {
@@ -53,11 +39,10 @@ public class Gato {
 		this.barulho = barulho;
 	}
 
-	public Gato(String nome, int idade, int patas, boolean asas, String barulho) {
+	public Gato(String nome, int idade, String sexo, String barulho) {
 		this.nome = nome;
 		this.idade = idade;
-		this.patas = patas;
-		this.asas = asas;
+		this.sexo = sexo;
 		this.barulho = barulho;
 	}
 
